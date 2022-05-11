@@ -1,0 +1,6 @@
+/*
+OR
+AND
+NOT
+IN -> CONTIDO -> IN (VALUES)
+*/
