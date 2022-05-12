@@ -16,3 +16,7 @@ SELECT * FROM tabela_de_produtos;
 SELECT * FROM tabela_de_produtos LIMIT 5;
 
 SELECT * FROM tabela_de_produtos LIMIT 3, 5; /* Toma os 5 registros a partir da 4º posição */
+
+SELECT * FROM notas_fiscais
+WHERE DATA_VENDA = '2017/01/01'
+LIMIT 10;
