@@ -59,3 +59,16 @@ FROM tabela_de_vendedores A
 INNER JOIN notas_fiscais B
 ON A.matricula = B.matricula
 GROUP BY A.MATRICULA;
+
+/*
+Obtenha o faturamento anual da empresa. 
+Leve em consideração que o valor 
+financeiro das vendas consiste em
+multiplicar a quantidade pelo preço.
+*/
+SELECT YEAR(NF.DATA_VENDA), 
+SUM(INF.QUANTIDADE * (INF.PRECO - NF.IMPOSTO)) AS FATURAMENTO
+FROM itens_notas_fiscais INF
+INNER JOIN notas_fiscais NF 
+ON NF.NUMERO = INF.NUMERO
+GROUP BY YEAR(DATA_VENDA);
