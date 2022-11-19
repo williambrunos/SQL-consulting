@@ -1,0 +1,1 @@
+alter table <old_name> rename <new_name>;
